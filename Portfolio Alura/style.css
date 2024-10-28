@@ -3,7 +3,45 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--text-font);
+}
+
+:root   {
+    --primary-color: #050505;
+    --secondary-color: #6CD94E;
+    --details-color: #EEEEEE;
+    --hover-color: #272727;
+
+    --text-font: "Montserrat", sans-serif;
+    --title-font: "Krona One", sans-serif;
+
+    --text-size: 24px;
+    --title-size: 36px;
+}
+
+header  {
+    background-color: var(--primary-color);
+}
+
+.navbar__container  {
+    margin: auto;
+    max-width: 1240px;
+    background-color: var(--primary-color);
+}
+
+.navbar__container--list    {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 0 0 0 
+}
+
+.navbar__container--list-item  a {
+    color: var(--secondary-color);
+    font-size: var(--text-size);
+    font-weight: 600;
+    text-decoration: none;
 }
 
 main    {
@@ -12,8 +50,8 @@ main    {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background-color: #050505;
-    color: #EEEEEE;
+    background-color: var(--primary-color);
+    color: var(--details-color);
 }
 
 .container__hero    {
@@ -33,17 +71,17 @@ main    {
 }
 
 .container__hero--description-title {
-    font-family: "Krona One", sans-serif;
-    font-size: 36px;
+    font-family: var(--title-font);
+    font-size: var(--title-size);
 }
 
 .container__hero--description-title strong  {
-    color: #6CD94E;
+    color: var(--secondary-color);
 }
 
 .container__hero--description-text  {
     text-align: justify;
-    font-size: 24px;
+    font-size: var(--text-size);
     line-height: 1.2em;
 }
 
@@ -52,13 +90,13 @@ main    {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    font-size: 24px;
+    font-size: var(--text-size);
     font-weight: 600;
 }
 
 .container__hero--social-title  {
-    font-size: 24px;
-    font-family: "Krona One", sans-serif;
+    font-size: var(--text-size);
+    font-family: var(--title-font);
 }
 
 .container__hero--social-item   {
@@ -68,17 +106,17 @@ main    {
     gap: 10px;
     width: 280px;
     padding: 20px 0;
-    border: 2px solid #6CD94E;
+    border: 2px solid var(--secondary-color);
     border-radius: 16px;
 }
 
 .container__hero--social-item a {
-    color: #EEE;
+    color: var(--details-color);
     text-decoration: none;
 }
 
 .container__hero--social-item:hover {
-    background-color: #272727;
+    background-color: var(--hover-color);
 }
 
 .container__hero--image img{
@@ -87,8 +125,8 @@ main    {
 }
 
 footer  {
-    background-color: #6CD94E;
-    color: #272727;
+    background-color: var(--secondary-color);
+    color: var(--hover-color);
     display: flex;
     justify-content: center;
     padding: 30px 0;
